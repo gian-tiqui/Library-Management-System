@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,30 @@ namespace Library_Management_System
 {
     class Book
     {
-        private string name, content;
+        private string title;
+        private string content;
+        private string id;
         private int lastPage;
 
-        public Book(string name, string content)
+        public Book(string title, string content, string id)
         {
-            this.name = name;
+            this.title = title;
             this.content = content;
+            this.id = id;
             this.lastPage = 0;
         }
 
 
+    }
+
+    class Library
+    {
+        private string id;
+        ArrayList<Book> books;
+        public Library() 
+        {
+            
+        }
     }
 
     public partial class Form1 : Form
